@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Knowit App</string>
+
+    <string name="button_1">First Task</string>
+    <string name="button_2">Second Task</string>
+    <string name="button_3">Third Task</string>
+    <string name="button_4">Fourth Task</string>
+
+    <string name="act1_name">My First Task</string>
+
+    <string name="act2_name">My Second Task</string>
+    <string name="button_contact">Pick Contact</string>
+    <string name="name_contact">Result Name</string>
+    <string name="pnr_contact">Result Number</string>
+
+    <string name="act3_name">My Third Task</string>
+    <string name="button_call">Call</string>
+    <string name="number_call">Input Phone Number</string>
+
+    <string name="act4_name">My Fourth Task</string>
+    <string name="textn">Write a Message</string>
+    <string name="textn_send">Send the Message</string>
+</resources>
