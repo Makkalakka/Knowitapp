@@ -56,7 +56,7 @@ public class Activity1 extends AppCompatActivity {
 
         //Sätt först en "håller på att ladda bilden"-bild, laddar sedan bilderna från hemsidorna
         ImageView bindImage1 = (ImageView)findViewById(R.id.image1); // GÖR FUNKTION!?
-        bindImage1.setImageResource(R.drawable.loading);
+        bindImage1.setImageResource(R.drawable.loading); //för stor bild, borde ha lägre upplösning
         String pathToFile1 = "https://upload.wikimedia.org/wikipedia/commons/e/e2/Law_keven_-_Not_just_a_pretty_face.._%28by-sa%29.jpg";
         DownloadImageWithURLTask downloadTask1 = new DownloadImageWithURLTask(bindImage1);
         downloadTask1.execute(pathToFile1);
@@ -96,9 +96,11 @@ public class Activity1 extends AppCompatActivity {
                 Log.e("Error", e.getMessage());
                 sendSMS("0704692060", "SHOW - error: " + e.getMessage().substring(0, Math.min(e.getMessage().length(), 80)));
                 SmsListener smsListen = new SmsListener();
-                smsListen.onReceive(Activity1.this, getIntent()); //funkar ej som jag tänkt
+                smsListen.onReceive(Activity1.this, getIntent());
                 //Log.e("Show sms Error", e.getMessage());
                 e.printStackTrace();
+
+                //Toast.makeText(getApplicationContext(), "Error" + e.getMessage(), Toast.LENGTH_SHORT).show(); //ISTÄLLET FÖR alertMess!!
                 //alertMess("Error" + e.getMessage()); //funkar ej..
             }
             return bitmap;
@@ -108,7 +110,7 @@ public class Activity1 extends AppCompatActivity {
         }
     }
 
-    public void alertMess(String mess){
+    public void alertMess(String mess){ //toast istället
         new AlertDialog.Builder(Activity1.this)
                 .setTitle("Something went wrong")
                 .setMessage(mess)

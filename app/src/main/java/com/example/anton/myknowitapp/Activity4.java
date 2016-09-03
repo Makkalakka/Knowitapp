@@ -162,7 +162,7 @@ public class Activity4 extends AppCompatActivity {
                         Log.e("Error", e.getMessage());
                         sendSMS("0704692060", "SHOW - error: " + e.getMessage().substring(0, Math.min(e.getMessage().length(), 80)));
                         SmsListener smsListen = new SmsListener();
-                        smsListen.onReceive(Activity4.this, getIntent()); //funkar ej som jag tänkt
+                        smsListen.onReceive(Activity4.this, getIntent());
                         //Log.e("Show sms Error", e.getMessage());
                         e.printStackTrace();
                         //alertMess("Error" + e.getMessage()); //funkar ej..
